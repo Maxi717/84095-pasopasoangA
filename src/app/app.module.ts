@@ -30,6 +30,9 @@ import { BrowserModule } from '@angular/platform-browser';
     MenuComponent,
     ListaArticulosComponent,
     EjemploCompComponent,
+    ArticulosComponent,
+    ArticulosFamiliasComponent,
+    InicioComponent,
   ],
   bootstrap: [AppComponent],
 })

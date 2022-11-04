@@ -49,10 +49,10 @@
     </thead>
     <tbody>
       <tr *ngFor="let item of Items">
-        <td>{{ ' item.Nombre | uppercase ' }}</td>
-        <td class="text-right">{{ 'item.Precio | currency' }}</td>
+        <td>{{ item.Nombre | uppercase }}</td>
+        <td class="text-right">{{ item.Precio | currency }}</td>
         <td class="text-right">{{ item.Stock }}</td>
-        <td>{{ item.FechaAlta |"date: 'dd/MM/yyyy'"}</td>
+        <td>{{ item.FechaAlta | date: 'dd/MM/yyyy' }}</td>
         <td>{{ item.Activo ? 'SI' : 'NO' }}</td>
         <td class="text-center text-nowrap">
           <button
