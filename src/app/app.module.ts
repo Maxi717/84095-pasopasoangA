@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ListaArticulosComponent } from './components/lista-articulos/lista-articulos.component';
@@ -11,12 +10,13 @@ import { ArticulosFamiliasComponent } from './components/articulos-familias/arti
 import { HttpClientModule } from '@angular/common/http';
 import { ArticulosComponent } from './components/articulos/articulos.component';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
     HttpClientModule,
-    BrowserModule,
     CommonModule,
+    BrowserModule,
     FormsModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/inicio', pathMatch: 'full' },
