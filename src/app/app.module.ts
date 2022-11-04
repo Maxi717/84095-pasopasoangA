@@ -10,11 +10,13 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { ArticulosFamiliasComponent } from './components/articulos-familias/articulos-familias.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticulosComponent } from './components/articulos/articulos.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
     HttpClientModule,
     BrowserModule,
+    CommonModule,
     FormsModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/inicio', pathMatch: 'full' },
