@@ -9,14 +9,13 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { ArticulosFamiliasComponent } from './components/articulos-familias/articulos-familias.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticulosComponent } from './components/articulos/articulos.component';
-import { CommonModule, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
     HttpClientModule,
     CommonModule,
-    NgIf,
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
