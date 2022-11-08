@@ -11,12 +11,12 @@
   <div class="form-group row">
     <label class="col-form-label col-sm-2 offset-sm-1"> Nombre: </label>
     <div class="col-sm-3">
-      <input type="text" name="Nombre" class="form-control" />
+      <input type="text" name="Nombre" class="form-control" formControlName="Nombre"/>
     </div>
     <label class="col-form-label col-sm-2 offset-sm-1"> Activo: </label>
     <div class="col-sm-3">
-      <select class="form-control" name="Activo">
-        <option *ngFor="let opt of OpcionesActivo">‌{{ opt.Nombre }}</option>
+      <select class="form-control" name="Activo" formControlName="Activo">
+        <option *ngFor="let opt of OpcionesActivo" [ngValue]="opt.Id">‌{{ opt.Nombre }}</option>
       </select>
     </div>
   </div>
@@ -130,7 +130,7 @@
         Nombre <span class="text-danger">*</span>
       </label>
       <div class="col-sm-6">
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" formControlName="Nombre"/>
       </div>
     </div>
 
@@ -140,7 +140,7 @@
         Precio <span class="text-danger">*</span>
       </label>
       <div class="col-sm-6">
-        <input type="text" name="Precio" class="form-control" />
+        <input type="text" name="Precio" class="form-control" formControlName="Precio"/>
       </div>
     </div>
 
@@ -150,7 +150,7 @@
         Stock <span class="text-danger">*</span>
       </label>
       <div class="col-sm-6">
-        <input type="text" name="Stock" class="form-control" />
+        <input type="text" name="Stock" class="form-control" formControlName="Stock"/>
       </div>
     </div>
 
@@ -160,7 +160,7 @@
         Codigo De Barra <span class="text-danger">*</span>
       </label>
       <div class="col-sm-6">
-        <input type="text" name="CodigoDeBarra" class="form-control" />
+        <input type="text" name="CodigoDeBarra" class="form-control" formControlName="CodigoDeBarra"/>
       </div>
     </div>
 
@@ -173,8 +173,8 @@
         Familia <span class="text-danger">*</span>
       </label>
       <div class="col-sm-6">
-        <select name="IdArticuloFamilia" class="form-control">
-          <option *ngFor="let opt of Familias">‌{{ opt.Nombre }}</option>
+        <select name="IdArticuloFamilia" class="form-control" formControlName="IdArticuloFamilia">
+          <option *ngFor="let opt of Familias" [ngValue]="opt.IdArticuloFamilia">‌{{ opt.Nombre }}</option>
         </select>
       </div>
     </div>
@@ -185,7 +185,7 @@
         Fecha de alta <span class="text-danger">*</span>
       </label>
       <div class="col-sm-6">
-        <input class="form-control" name="FechaAlta" />
+        <input class="form-control" name="FechaAlta" formControlName="FechaAlta"/>
       </div>
     </div>
 
@@ -195,8 +195,8 @@
         >Activo</label
       >
       <div class="col-sm-6">
-        <select name="Activo" [disabled]="true" class="form-control">
-          <option *ngFor="let opt of OpcionesActivo">‌{{ opt.Nombre }}</option>
+        <select name="Activo" [disabled]="true" class="form-control" formControlName="Activo">
+          <option *ngFor="let opt of OpcionesActivo" [ngValue]="opt.Id">‌{{ opt.Nombre }}</option>
         </select>
       </div>
     </div>
